@@ -1,8 +1,25 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
 ---
 
 <DefaultLayout title="Home">
   <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Features</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:tailwind" title="">
+          Haluatko tehdä yrityksesti nettisivuista ammattimaisemmat?
+        </Feature>
+        <Feature icon="mdi:book-open-page-variant" title="">
+          Mietitkö, miten somepäivityksestä saisi tehtyä kohderyhmää puhuttelevan?
+        </Feature>
+        <Feature icon="mdi:looks" title="">
+          Kaipaisiko työhakemuksesi viilausta, jotta erottuisit paremmin joukosta?
+        </Feature>
+      </div>
+    </div>
+  </section>
 </DefaultLayout>
