@@ -1,0 +1,19 @@
+---
+    const { title, description } = Astro.props
+---
+
+<div class="box">
+    <h5 class="mb-2 text-2xl">{title}</h5>
+    <p class="text-xl">
+      {description}
+    </p>
+</div>
+
+<style>
+    .box {
+      padding: 1rem;
+      width: 40ch;
+      border: 3px solid var(--primary-100);
+      border-radius: 5px;
+    }
+</style>
