@@ -5,13 +5,12 @@ import { Media } from 'accessible-astro-components';
 ---
 
 <DefaultLayout title="Services">
-  <div class="container">
+  <div class="container text-center">
     <section class="mt-20">
-    <h2 class="mb-10 text-6xl">Palvelut</h2>
-    <p class="mb-4 text-2xl">
-      Jos olisit itse tekemässä valintaa kahden palveluntarjoajan välillä, kumman näistä todennäköisemmin valitsisit?
-    </p>
-    <div class="flex flex-wrap gap-5">
+    <h2 class="mb-16 text-center text-4xl">
+      Erikoisalaamme on <br /> <span class="text-gradient">ammattimaisten ja mukaansatempaaviena</span> <br /> sisältöjen luonti
+    </h2>
+    <div class="flex flex-wrap justify-center gap-5">
       <Card
         title="Tarjoamamme palvelu"
         description="Tarjoamme asiakkaillemme kaikki digi markkinoinnin palvelut, kuten verkkosivujen suunnittelua ja SEO:ta. Uskomme siihen, että tasokkaiden palveluiden ei tarvitse olla yli hintaisia. Meidän visio on olla tukemassa muiden yritysten kehitystaipaleella, auttaa heitä juuri niin paljon kun he tarvitsee. Voisi sanoa, että emme hae irtosuhdetta vaan kumppanuutta."
@@ -42,5 +41,12 @@ import { Media } from 'accessible-astro-components';
 <style>
   p {
     max-width: 60ch;
+  }
+
+  .text-gradient {
+    background: linear-gradient(315deg, var(--pink-200) 10%, var(--primary-100) );
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 </style>

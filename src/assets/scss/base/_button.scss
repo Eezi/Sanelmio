@@ -9,16 +9,16 @@
   text-decoration: none;
   text-align: center;
   color: var(--neutral-900);
-  background-color: var(--primary-100);
-  border: 3px solid var(--primary-100);
+  background-color: var(--secondary-50);
+  border: 3px solid var(--secondary-50);
   border-radius: 3px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
   &:hover,
   &:focus {
     text-decoration: underline;
-    background-color: var(--primary-200);
-    border-color: var(--primary-200);
+    background-color: var(--secondary-100);
+    border-color: var(--secondary-100);
   }
 
   &:visited {
@@ -26,13 +26,13 @@
   }
 
   &.color-secondary {
-    background-color: var(--secondary-100);
-    border-color: (var(--secondary-100));
+    background-color: var(--pink-50);
+    border-color: (var(--pink-50));
 
     &:hover,
     &:focus {
-      background-color: var(--secondary-400);
-      border-color: var(--secondary-400);
+      background-color: var(--pink-100);
+      border-color: var(--pink-100);
     }
   }
 
