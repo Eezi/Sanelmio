@@ -1,14 +1,13 @@
 ---
 import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
-const { src = '/logo_img.png' } = Astro.props
+const { src = '/logo.png' } = Astro.props
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href="/" class="flex relative items-center gap-2 !no-underline">
       <img src={src} alt="Your Logo" width="110" height="110" />
-      <span class="font-bold absolute logo_text">Sanelmio</span>
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -339,7 +338,7 @@ const { src = '/logo_img.png' } = Astro.props
         padding: 0;
         margin-top: -1px;
         border: none;
-        color: var(--neutral-900);
+        color: var(--font-color);
 
         &:hover {
           color: var(--action-color-state);

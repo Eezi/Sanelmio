@@ -6,7 +6,7 @@ const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
 
 <div class="feature flex flex-col items-center gap-1 text-center">
   <div>
-    <Icon name={icon} />
+     <img src={icon} alt={title} width="110" height="110" />
   </div>
   <h3>{title}</h3>
   <p class="text-xl">
@@ -40,14 +40,14 @@ const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
     &::before {
       inset: 0;
       background-color: var(--neutral-100);
-      border: 3px solid var(--neutral-700);
+      border: 3px solid var(--neutral-900);
       border-radius: 1rem;
       box-shadow: 0 0 0 6px var(--neutral-100);
       z-index: 1;
     }
 
     &::after {
-      background-color: var(--action-color);
+      background-color: hsla(262, 46%, 62%, .5);
       inset: 1rem -0.85rem -0.85rem 1rem;
       border-radius: 1rem;
       z-index: 0;
