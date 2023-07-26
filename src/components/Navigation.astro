@@ -6,9 +6,9 @@ const { src = '/logo_img.png' } = Astro.props
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
-    <a href="/" class="flex items-center gap-2 !no-underline">
-      <img src={src} alt="Your Logo" width="60" height="55" />
-      <span class="font-bold">Sanelmio</span>
+    <a href="/" class="flex relative items-center gap-2 !no-underline">
+      <img src={src} alt="Your Logo" width="110" height="110" />
+      <span class="font-bold absolute logo_text">Sanelmio</span>
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -42,13 +42,10 @@ const { src = '/logo_img.png' } = Astro.props
       const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[]
 
       menuItems.forEach((menuItem) => {
-        if (currenPathname.includes(menuItem.pathname.replaceAll('/', '')) && menuItem.textContent !== 'Home') {
+        if (currenPathname === menuItem.pathname) {
           menuItem.classList.add('is-active')
           menuItem.setAttribute('aria-current', 'page')
-        } else if (menuItem.textContent === 'Home' && currenPathname === '/') {
-          menuItem.classList.add('is-active')
-          menuItem.setAttribute('aria-current', 'page')
-        }
+        }  
       })
     })
   }
@@ -272,6 +269,7 @@ const { src = '/logo_img.png' } = Astro.props
           font-size: 1.125rem;
           line-height: 1.6875rem;
           transition: color 0.15s ease-in-out;
+          position: relative;
         }
 
         a:hover,
@@ -279,14 +277,33 @@ const { src = '/logo_img.png' } = Astro.props
         .is-active,
         .has-dropdown > button:hover,
         .has-dropdown > button:focus {
-          text-decoration: underline;
-          text-decoration-thickness: 1px;
-          text-decoration-style: wavy;
-          text-underline-offset: 7px;
+          &:after {
+           content: '';
+           display: block;
+           width: 100%;
+           height: 4px;
+           border-radius: 6px;
+           background: linear-gradient(315deg, var(--pink-100) 20%, var(--primary-100) );
+           position: absolute;
+           bottom: -4px;
+           left: 0;
+          } 
         }
 
         .is-active {
           font-weight: bold;
+
+          &:after {
+           content: '';
+           display: block;
+           width: 100%;
+           height: 4px;
+           border-radius: 6px;
+           background: linear-gradient(315deg, var(--secondary-100) 20%, var(--pink-200) );
+           position: absolute;
+           bottom: -4px;
+           left: 0;
+          } 
         }
       }
     }
@@ -322,7 +339,7 @@ const { src = '/logo_img.png' } = Astro.props
         padding: 0;
         margin-top: -1px;
         border: none;
-        color: var(--action-color);
+        color: var(--neutral-900);
 
         &:hover {
           color: var(--action-color-state);
@@ -402,5 +419,12 @@ const { src = '/logo_img.png' } = Astro.props
         box-shadow: none;
       }
     }
+  }
+  
+  .logo_text {
+    font-size: 1.7rem;
+	  -webkit-text-stroke: 1px var(--primary-100);
+	  -webkit-text-fill-color: white;
+    text-shadow: 3px 3px 7px 0px #FFF;
   }
 </style>

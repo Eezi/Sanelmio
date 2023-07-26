@@ -56,12 +56,11 @@ body {
     text-decoration: underline;
 
     &:visited {
-      color: var(--action-color);
+      color: var(--neutral-900);
     }
 
     &:hover,
     &:focus {
-      color: var(--action-color-state);
       text-decoration: none;
     }
   }
