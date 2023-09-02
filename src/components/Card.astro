@@ -1,23 +1,10 @@
 ---
-    const { title, description } = Astro.props
+const { title, description } = Astro.props
 ---
 
-<div class="box">
-    <h5 class="mb-5 text-2xl">{title}</h5>
-    <p class="text-base">
-      {description}
-    </p>
+<div>
+  <h5 class="mb-5 text-2xl">{title}</h5>
+  <p class="text-base">
+    {description}
+  </p>
 </div>
-
-<style>
-    .box {
-      padding: 1rem;
-      max-width: 40ch;
-      border-width: 4px;
-      border-radius: 6px;
-      border-style: solid;
-      border-image: linear-gradient(to right, var(--pink-200), var(--primary-100)) 1;
-      box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 4px;
-
-    }
-</style>
