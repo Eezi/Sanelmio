@@ -26,13 +26,13 @@
   }
 
   &.color-secondary {
-    background-color: var(--pink-50);
-    border-color: (var(--pink-50));
+    background-color: var(--pinkki-50);
+    border-color: (var(--pinkki-50));
 
     &:hover,
     &:focus {
-      background-color: var(--pink-100);
-      border-color: var(--pink-100);
+      background-color: var(--pinkki-100);
+      border-color: var(--pinkki-100);
     }
   }
 
