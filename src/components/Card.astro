@@ -2,9 +2,9 @@
 const { title, description } = Astro.props
 ---
 
-<div>
-  <h5 class="mb-5 text-2xl">{title}</h5>
-  <p class="text-base">
+<div class="flex h-full flex-col justify-between py-3">
+  <h5 class="mb-3 text-xl font-bold">{title}</h5>
+  <p class="text-base font-medium">
     {description}
   </p>
 </div>
