@@ -19,7 +19,7 @@ import { Media } from 'accessible-astro-components'
           Autamme sinua <br /> sisältöjen kanssa
         </h2>
       </div>
-      <div class="help-container text-base md:text-xl">
+      <div class="help-container mb-14 text-base md:text-xl">
         <div>
           <div class="flex items-center gap-2">
             <div>
@@ -97,28 +97,34 @@ import { Media } from 'accessible-astro-components'
           </div>
         </div>
       </div>
+      <img class="block w-full md:w-8/12" src="/color_text.svg" alt="colorful-text" />
     </section>
     <section class="mb-64">
       <div class="grid place-items-center">
         <h2 class="mb-10 text-3xl">Kumman kaa?</h2>
-        <p class="mb-20 text-xl">
+        <p class="mb-20 text-xl font-medium">
           Jos olisit itse tekemässä valintaa kahden palveluntarjoajan välillä, kumman näistä todennäköisemmin
           valitsisit?
         </p>
       </div>
-      <!--<p class="mb-4 text-xl">Yritys A (tosielämän tilanteesta ispiroitunut esimerkki)</p>-->
-      <div class="flex flex-wrap items-stretch justify-center gap-5 md:justify-around">
-        <div class="gradient-box">
-          <Card
-            title="Tarjoamamme palvelu"
-            description="Tarjoamme asiakkaillemme kaikki digi markkinoinnin palvelut, kuten verkkosivujen suunnittelua ja SEO:ta. Uskomme siihen, että tasokkaiden palveluiden ei tarvitse olla yli hintaisia. Meidän visio on olla tukemassa muiden yritysten kehitystaipaleella, auttaa heitä juuri niin paljon kun he tarvitsee. Voisi sanoa, että emme hae irtosuhdetta vaan kumppanuutta."
-          />
+      <div class="flex flex-wrap items-stretch justify-center gap-16 md:justify-around">
+        <div>
+          <p class="mb-2 text-left font-semibold">Yritys A: modifioitu tosielämän esimerkki</p>
+          <div class="gradient-box">
+            <Card
+              title="Tarjoamamme palvelu"
+              description="Tarjoamme asiakkaillemme kaikki digi markkinoinnin palvelut, kuten verkkosivujen suunnittelua ja SEO:ta. Uskomme siihen, että tasokkaiden palveluiden ei tarvitse olla yli hintaisia. Meidän visio on olla tukemassa muiden yritysten kehitystaipaleella, auttaa heitä juuri niin paljon kun he tarvitsee. Voisi sanoa, että emme hae irtosuhdetta vaan kumppanuutta."
+            />
+          </div>
         </div>
-        <div class="gradient-box">
-          <Card
-            title="Kaikki digimarkkinoinnin palvelut yhden kumppanuuden kautta"
-            description="Tarjoamme asiakkaillemme kaikkia digimarkkinoinnin palveluja, kuten verkkosivujen suunnittelua ja hakukoneoptimointia (SEO). Uskomme, että tasokkaiden palveluiden ei tarvitse olla ylihintaisia. Tavoitteemme on olla apuna ja tukena muiden yritysten kehitystapaleilla kunkin yksilöllisen tarpeen mukaan. Voisikin sanoa, että etsimme aitoa kump"
-          />
+        <div>
+          <p class="mb-2 text-left font-semibold">Yritys B: sama sisältö Sanelmion käsittelyn jälkeen</p>
+          <div class="gradient-box">
+            <Card
+              title="Kaikki digimarkkinoinnin palvelut yhden kumppanuuden kautta"
+              description="Tarjoamme asiakkaillemme kaikkia digimarkkinoinnin palveluja, kuten verkkosivujen suunnittelua ja hakukoneoptimointia (SEO). Uskomme, että tasokkaiden palveluiden ei tarvitse olla ylihintaisia. Tavoitteemme on olla apuna ja tukena muiden yritysten kehitystapaleilla kunkin yksilöllisen tarpeen mukaan. Voisikin sanoa, että etsimme aitoa kump"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -137,7 +143,10 @@ import { Media } from 'accessible-astro-components'
       </div>
     </section>
     <section class="mb-40">
-      <h2 class="text-3xl">Sanelmio pitää huolen, että erotut aina eduksesi!</h2>
+      <h2 class="mb-2 text-3xl">Sanelmio pitää huolen, että erotut aina eduksesi!</h2>
+      <div class="color_line grid place-content-center">
+        <img class="w-10/12 md:w-5/12" loading="lazy" src="/color_line.png" alt="colorful_line" />
+      </div>
     </section>
   </div>
 </DefaultLayout>
@@ -147,12 +156,17 @@ import { Media } from 'accessible-astro-components'
     max-width: 60ch;
   }
 
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
   .help-container {
     display: flex;
     gap: 2rem;
     justify-content: center;
 
-    @media (max-width: 420px) {
+    @media (max-width: 500px) {
       flex-direction: column;
       padding-left: 2.5rem;
       gap: 0;
@@ -174,5 +188,6 @@ import { Media } from 'accessible-astro-components'
     border-style: solid;
     border-image: linear-gradient(to right, var(--pinkki-200), var(--primary-100)) 1;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 4px;
+    height: 93%;
   }
 </style>
