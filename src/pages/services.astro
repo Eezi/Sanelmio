@@ -9,7 +9,9 @@ import { Media } from 'accessible-astro-components'
     <section class="mb-64 mt-20">
       <h1 class="mb-16 text-center text-3xl md:text-4xl">
         Erikoisalaamme on <br />
-        <span class="text-gradient">ammattimaisten ja mukaansatempaavien</span>
+        <span class="bg-gradient-to-r from-[var(--primary-100)] to-[var(--pinkki-200)] bg-clip-text text-transparent"
+          >ammattimaisten ja mukaansatempaavien</span
+        >
         <br /> sisältöjen luonti
       </h1>
     </section>
@@ -159,13 +161,6 @@ import { Media } from 'accessible-astro-components'
   img {
     display: block;
     margin: 0 auto;
-  }
-
-  .text-gradient {
-    background: linear-gradient(315deg, var(--pinkki-200) 10%, var(--primary-100));
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .gradient-box {
