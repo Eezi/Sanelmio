@@ -7,9 +7,9 @@ import { Media } from 'accessible-astro-components'
 <DefaultLayout title="Services">
   <div class="container text-center">
     <section class="mb-64 mt-20">
-      <h1 class="mb-16 text-center text-4xl">
+      <h1 class="mb-16 text-center text-3xl md:text-4xl">
         Erikoisalaamme on <br />
-        <span class="text-gradient">ammattimaisten ja mukaansatempaaviena</span>
+        <span class="text-gradient">ammattimaisten ja mukaansatempaavien</span>
         <br /> sisältöjen luonti
       </h1>
     </section>
@@ -19,7 +19,7 @@ import { Media } from 'accessible-astro-components'
           Autamme sinua <br /> sisältöjen kanssa
         </h2>
       </div>
-      <div class="help-container mb-14 text-base md:text-xl">
+      <div class="mb-14 gap-8 pl-10 text-base sm:flex sm:justify-center md:text-xl">
         <div>
           <div class="flex items-center gap-2">
             <div>
@@ -159,18 +159,6 @@ import { Media } from 'accessible-astro-components'
   img {
     display: block;
     margin: 0 auto;
-  }
-
-  .help-container {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-
-    @media (max-width: 500px) {
-      flex-direction: column;
-      padding-left: 2.5rem;
-      gap: 0;
-    }
   }
 
   .text-gradient {
