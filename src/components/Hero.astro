@@ -7,15 +7,15 @@ const { src = '/hero_img.svg' } = Astro.props
   <div class="container">
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
-        <h3 class="text-center text-4xl md:text-left lg:text-6xl">
+        <h1 class="text-center text-4xl md:text-left lg:text-6xl">
           <slot>Laadukasta <span class="text-gradient">sisällöntuotantoa</span><br /> erilaisiin tarpeisiin</slot>
-        </h3>
+        </h1>
       </div>
     </div>
     <div class="hero_desciption mt-10">
       <div class="flex flex-col gap-3 min-[500px]:flex-row">
-        <a class="button color-secondary" href="/services"> Palvelut</a>
-        <a class="button" href="/contact"> Ota yhteyttä</a>
+        <a class="button color-secondary min-w-[8rem]" href="/services"> Palvelut</a>
+        <a class="button min-w-[8rem]" href="/contact"> Ota yhteyttä</a>
       </div>
     </div>
   </div>

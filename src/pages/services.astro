@@ -4,9 +4,9 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 import { Media } from 'accessible-astro-components'
 ---
 
-<DefaultLayout title="Services">
+<DefaultLayout title="Palvelut">
   <div class="container text-center">
-    <section class="mb-64 mt-20">
+    <section class="mb-40 mt-20">
       <h1 class="mb-16 text-center text-3xl md:text-4xl">
         Erikoisalaamme on <br />
         <span class="bg-gradient-to-r from-[var(--primary-100)] to-[var(--pinkki-200)] bg-clip-text text-transparent"
@@ -15,13 +15,11 @@ import { Media } from 'accessible-astro-components'
         <br /> sisältöjen luonti
       </h1>
     </section>
-    <section class="mt-25 mb-64">
+    <section class="mt-25 mb-40">
       <div>
-        <h2 class="mb-10 text-3xl">
-          Autamme sinua <br /> sisältöjen kanssa
-        </h2>
+        <h2 class="mb-10 text-3xl">Autamme sinua mm. seuraavien sisältöjen kanssa:</h2>
       </div>
-      <div class="mb-14 gap-8 pl-10 text-base sm:flex sm:justify-center md:text-xl">
+      <div class="mb-20 gap-8 pl-10 text-base sm:flex sm:justify-center md:text-xl">
         <div>
           <div class="flex items-center gap-2">
             <div>
@@ -101,7 +99,7 @@ import { Media } from 'accessible-astro-components'
       </div>
       <img class="block w-full md:w-8/12" src="/color_text.svg" alt="colorful-text" />
     </section>
-    <section class="mb-64">
+    <section class="mb-40">
       <div class="grid place-items-center">
         <h2 class="mb-10 text-3xl">Kumman kaa?</h2>
         <p class="mb-20 text-xl font-medium">
@@ -115,7 +113,9 @@ import { Media } from 'accessible-astro-components'
           <div class="gradient-box">
             <Card
               title="Tarjoamamme palvelu"
-              description="Tarjoamme asiakkaillemme kaikki digi markkinoinnin palvelut, kuten verkkosivujen suunnittelua ja SEO:ta. Uskomme siihen, että tasokkaiden palveluiden ei tarvitse olla yli hintaisia. Meidän visio on olla tukemassa muiden yritysten kehitystaipaleella, auttaa heitä juuri niin paljon kun he tarvitsee. Voisi sanoa, että emme hae irtosuhdetta vaan kumppanuutta."
+              description={`Tarjoamme asiakkaillemme kaikki digi markkinoinnin palvelut, kuten verkkosivujen suunnittelua ja SEO:ta. Uskomme siihen, että tasokkaiden palveluiden ei tarvitse olla yli hintaisia. 
+              
+              Meidän visio on olla tukemassa muiden yritysten kehitystaipaleella, auttaa heitä juuri niin paljon kun he tarvitsee. Voisi sanoa, että emme hae irtosuhdetta vaan kumppanuutta.`}
             />
           </div>
         </div>
@@ -124,7 +124,9 @@ import { Media } from 'accessible-astro-components'
           <div class="gradient-box">
             <Card
               title="Kaikki digimarkkinoinnin palvelut yhden kumppanuuden kautta"
-              description="Tarjoamme asiakkaillemme kaikkia digimarkkinoinnin palveluja, kuten verkkosivujen suunnittelua ja hakukoneoptimointia (SEO). Uskomme, että tasokkaiden palveluiden ei tarvitse olla ylihintaisia. Tavoitteemme on olla apuna ja tukena muiden yritysten kehitystapaleilla kunkin yksilöllisen tarpeen mukaan. Voisikin sanoa, että etsimme aitoa kump"
+              description={`Tarjoamme asiakkaillemme kaikkia digimarkkinoinnin palveluja, kuten verkkosivujen suunnittelua ja hakukoneoptimointia (SEO). Uskomme, että tasokkaiden palveluiden ei tarvitse olla ylihintaisia. 
+              
+              Tavoitteemme on olla apuna ja tukena muiden yritysten kehitystaipaleilla kunkin yksilöllisen tarpeen mukaan. Voisikin sanoa, että etsimme aitoa kumppanuutta, emme irtosuhdetta.`}
             />
           </div>
         </div>
@@ -132,15 +134,26 @@ import { Media } from 'accessible-astro-components'
     </section>
     <section class="mb-40">
       <div class="grid place-items-center">
-        <h2 class="mb-10 text-3xl">Kumman kaa?</h2>
-        <p class="mb-20 text-xl">Entäpä ansioluettelot; kumman näistä hakijoista todennäköisemmin palkkaisit?</p>
+        <p class="mb-20 text-xl font-medium">
+          Entäpä ansioluettelot: kumman näistä hakijoista todennäköisemmin palkkaisit?
+        </p>
       </div>
       <div class="flex flex-wrap justify-center gap-5 md:justify-around">
-        <div class="gradient-box">
-          <Media class="rounded-lg" src="/cv.png" />
+        <div>
+          <p class="mb-2 text-left font-semibold">Hakija A: modifioitu tosielämän esimerkki</p>
+          <div
+            class="h-[93%] max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--secondary-100)] via-[var(--pinkki-50)] to-[var(--pinkki-100)] p-1"
+          >
+            <Media class="h-full" src="/cv.png" />
+          </div>
         </div>
-        <div class="gradient-box">
-          <Media class="rounded-lg" src="/cv_better.png" />
+        <div>
+          <p class="mb-2 text-left font-semibold">Hakija B: sama sisältö Sanelmion käsittelyn jälkeen</p>
+          <div
+            class="h-[93%] max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--pinkki-100)] via-[var(--pinkki-50)] to-[var(--primary-100)] p-1 pr-[0.1rem]"
+          >
+            <Media class="h-full" src="/cv_better.png" />
+          </div>
         </div>
       </div>
     </section>
@@ -161,6 +174,7 @@ import { Media } from 'accessible-astro-components'
   img {
     display: block;
     margin: 0 auto;
+    height: auto;
   }
 
   .gradient-box {

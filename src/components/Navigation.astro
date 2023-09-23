@@ -29,18 +29,19 @@ const { src = '/logo.png' } = Astro.props
 <script>
   // variables
   const mainNav = document.querySelector('#main-navigation')
-  const mainMenu = mainNav.querySelector('ul')
+  const mainMenu = mainNav?.querySelector('ul')
   const dropdownMenus = [...document.querySelectorAll('.has-dropdown button')]
 
   // functions
   const setActiveMenuItem = () => {
-    const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
+    const mobileDesktopMenus = mainNav?.querySelectorAll('nav > ul')
     const currenPathname = window.location.pathname
 
-    mobileDesktopMenus.forEach((menu) => {
+    mobileDesktopMenus?.forEach((menu) => {
       const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[]
 
       menuItems.forEach((menuItem) => {
+        console.log('currenPathname', currenPathname, 'ITEM', menuItem.pathname)
         if (currenPathname === menuItem.pathname) {
           menuItem.classList.add('is-active')
           menuItem.setAttribute('aria-current', 'page')
@@ -50,8 +51,8 @@ const { src = '/logo.png' } = Astro.props
   }
 
   const checkMenuSize = () => {
-    const mainNavWidth = mainNav.getBoundingClientRect().width
-    const desktopMenuWidth = document.querySelector('.desktop-menu').getBoundingClientRect().width
+    const mainNavWidth = mainNav?.getBoundingClientRect().width
+    const desktopMenuWidth = document.querySelector('.desktop-menu')?.getBoundingClientRect().width
     const logoWidthBuffer = 300
     const totalMenuWidth = Math.round(desktopMenuWidth) + logoWidthBuffer
 
@@ -400,7 +401,7 @@ const { src = '/logo.png' } = Astro.props
     }
 
     svg path {
-      fill: var(--action-color);
+      fill: var(--primary-100);
       transition: fill 0.2s ease-in-out;
     }
 

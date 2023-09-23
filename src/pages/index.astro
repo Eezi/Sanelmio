@@ -4,21 +4,32 @@ import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
 ---
 
-<DefaultLayout title="Home">
+<DefaultLayout title="Laadukasta sisällöntuotantoa erilaisiin tarpeisiin">
   <Hero />
-  <section class="my-64">
+  <section class="mb-40 mt-64">
     <div class="container">
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="/pen.svg" title="">
-          Haluatko tehdä yrityksesti nettisivuista ammattimaisemmat?
-        </Feature>
-        <Feature icon="twitter.svg" title="">
+        <Feature icon="pen-paper.svg" title="">Haluatko tehdä yrityksesi nettisivuista ammattimaisemmat?</Feature>
+        <Feature icon="bird-logo.svg" title="">
           Mietitkö, miten somepäivityksestä saisi tehtyä kohderyhmää puhuttelevan?
         </Feature>
-        <Feature icon="document.svg" title="">
+        <Feature icon="docs.svg" title="">
           Kaipaisiko työhakemuksesi viilausta, jotta erottuisit paremmin joukosta?
         </Feature>
       </div>
     </div>
   </section>
+  <section class="text-center">
+    <h2 class="mb-2 text-3xl">Olit sitten yrityksen edustaja tai yksityishenkilö, Sanelmio on apunasi!</h2>
+    <div class="grid place-content-center">
+      <img class="w-10/12 md:w-5/12" loading="lazy" src="/color_line.png" alt="colorful_line" />
+    </div>
+  </section>
 </DefaultLayout>
+
+<style>
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
