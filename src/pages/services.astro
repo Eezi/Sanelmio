@@ -97,7 +97,7 @@ import { Media } from 'accessible-astro-components'
           </div>
         </div>
       </div>
-      <img class="block w-full md:w-8/12" src="/color_text.svg" alt="colorful-text" />
+      <img id="color_text" class="block w-full md:w-8/12" src="/color_text.svg" alt="colorful-text" />
     </section>
     <section class="mb-40">
       <div class="grid place-items-center">
@@ -144,15 +144,15 @@ import { Media } from 'accessible-astro-components'
           <div
             class="h-[93%] max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--secondary-100)] via-[var(--pinkki-50)] to-[var(--pinkki-100)] p-1"
           >
-            <Media class="h-full" src="/cv.png" />
+            <Media class="h-full" src="/poor-cv.svg" />
           </div>
         </div>
         <div>
           <p class="mb-2 text-left font-semibold">Hakija B: sama sisältö Sanelmion käsittelyn jälkeen</p>
           <div
-            class="h-[93%] max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--pinkki-100)] via-[var(--pinkki-50)] to-[var(--primary-100)] p-1 pr-[0.1rem]"
+            class="max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--pinkki-100)] via-[var(--pinkki-50)] to-[var(--primary-100)] p-1 md:h-[93%] md:pr-[0.1rem]"
           >
-            <Media class="h-full" src="/cv_better.png" />
+            <Media class="h-full" src="/cool-cv.svg" />
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@ import { Media } from 'accessible-astro-components'
     <section class="mb-40">
       <h2 class="mb-2 text-3xl">Sanelmio pitää huolen, että erotut aina eduksesi!</h2>
       <div class="color_line grid place-content-center">
-        <img class="w-10/12 md:w-5/12" loading="lazy" src="/color_line.png" alt="colorful_line" />
+        <img class="w-10/12 md:w-5/12" src="/color_line.png" alt="colorful_line" />
       </div>
     </section>
   </div>
@@ -188,3 +188,12 @@ import { Media } from 'accessible-astro-components'
     height: 93%;
   }
 </style>
+
+<script>
+  const handleMobileImage = () => {
+    if (window.innerWidth <= 650) {
+      document.getElementById('color_text').src = 'mobile_text.svg'
+    }
+  }
+  handleMobileImage()
+</script>
