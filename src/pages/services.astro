@@ -97,7 +97,10 @@ import { Media } from 'accessible-astro-components'
           </div>
         </div>
       </div>
-      <img id="color_text" class="block w-full md:w-8/12" src="/color_text.svg" alt="colorful-text" />
+      <picture>
+        <source class="block w-full md:w-8/12" media="(max-width: 650px)" srcset="/mobile_text.svg" />
+        <img class="block w-full md:w-8/12" src="/color_text.svg" alt="colorful_text" />
+      </picture>
     </section>
     <section class="mb-40">
       <div class="grid place-items-center">
@@ -139,12 +142,12 @@ import { Media } from 'accessible-astro-components'
         </p>
       </div>
       <div class="flex flex-wrap justify-center gap-5 md:justify-around">
-        <div>
+        <div class="mb-2">
           <p class="mb-2 text-left font-semibold">Hakija A: modifioitu tosielämän esimerkki</p>
           <div
             class="h-[93%] max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--secondary-100)] via-[var(--pinkki-50)] to-[var(--pinkki-100)] p-1"
           >
-            <Media class="h-full" src="/poor-cv.svg" />
+            <Media class="h-full object-cover" src="/poor-cv.svg" />
           </div>
         </div>
         <div>
@@ -152,7 +155,7 @@ import { Media } from 'accessible-astro-components'
           <div
             class="max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--pinkki-100)] via-[var(--pinkki-50)] to-[var(--primary-100)] p-1 md:h-[93%] md:pr-[0.1rem]"
           >
-            <Media class="h-full" src="/cool-cv.svg" />
+            <Media class="h-full object-cover" src="/cool-cv.svg" />
           </div>
         </div>
       </div>
@@ -188,12 +191,3 @@ import { Media } from 'accessible-astro-components'
     height: 93%;
   }
 </style>
-
-<script>
-  const handleMobileImage = () => {
-    if (window.innerWidth <= 650) {
-      document.getElementById('color_text').src = 'mobile_text.svg'
-    }
-  }
-  handleMobileImage()
-</script>
