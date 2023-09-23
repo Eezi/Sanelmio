@@ -41,8 +41,7 @@ const { src = '/logo.png' } = Astro.props
       const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[]
 
       menuItems.forEach((menuItem) => {
-        console.log('currenPathname', currenPathname, 'ITEM', menuItem.pathname)
-        if (currenPathname === menuItem.pathname) {
+        if (currenPathname === `${menuItem.pathname}/`) {
           menuItem.classList.add('is-active')
           menuItem.setAttribute('aria-current', 'page')
         }
