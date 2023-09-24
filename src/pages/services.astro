@@ -6,7 +6,7 @@ import { Media } from 'accessible-astro-components'
 
 <DefaultLayout title="Palvelut">
   <div class="container text-center">
-    <section class="mb-40 mt-20">
+    <section class="mb-44 mt-20">
       <h1 class="mb-16 text-center text-3xl md:text-4xl">
         Erikoisalaamme on <br />
         <span class="bg-gradient-to-r from-[var(--primary-100)] to-[var(--pinkki-200)] bg-clip-text text-transparent"
@@ -17,7 +17,7 @@ import { Media } from 'accessible-astro-components'
     </section>
     <section class="mt-25 mb-40">
       <div>
-        <h2 class="mb-10 text-3xl">Autamme sinua mm. seuraavien sisältöjen kanssa:</h2>
+        <h2 class="mb-10 text-2xl md:text-3xl">Autamme sinua mm. seuraavien sisältöjen kanssa:</h2>
       </div>
       <div class="mb-20 gap-8 pl-10 text-base sm:flex sm:justify-center md:text-xl">
         <div>
@@ -113,7 +113,9 @@ import { Media } from 'accessible-astro-components'
       <div class="flex flex-wrap items-stretch justify-center gap-16 md:justify-around">
         <div>
           <p class="mb-2 text-left font-semibold">Yritys A: modifioitu tosielämän esimerkki</p>
-          <div class="gradient-box">
+          <div
+            class="h-[93%] max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--secondary-100)] via-[var(--pinkki-50)] to-[var(--pinkki-100)] p-1"
+          >
             <Card
               title="Tarjoamamme palvelu"
               description={`Tarjoamme asiakkaillemme kaikki digi markkinoinnin palvelut, kuten verkkosivujen suunnittelua ja SEO:ta. Uskomme siihen, että tasokkaiden palveluiden ei tarvitse olla yli hintaisia. 
@@ -124,7 +126,9 @@ import { Media } from 'accessible-astro-components'
         </div>
         <div>
           <p class="mb-2 text-left font-semibold">Yritys B: sama sisältö Sanelmion käsittelyn jälkeen</p>
-          <div class="gradient-box">
+          <div
+            class="max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--pinkki-100)] via-[var(--pinkki-50)] to-[var(--primary-100)] p-1"
+          >
             <Card
               title="Kaikki digimarkkinoinnin palvelut yhden kumppanuuden kautta"
               description={`Tarjoamme asiakkaillemme kaikkia digimarkkinoinnin palveluja, kuten verkkosivujen suunnittelua ja hakukoneoptimointia (SEO). Uskomme, että tasokkaiden palveluiden ei tarvitse olla ylihintaisia. 
@@ -145,9 +149,9 @@ import { Media } from 'accessible-astro-components'
         <div class="mb-2">
           <p class="mb-2 text-left font-semibold">Hakija A: modifioitu tosielämän esimerkki</p>
           <div
-            class="h-[93%] max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--secondary-100)] via-[var(--pinkki-50)] to-[var(--pinkki-100)] p-1"
+            class="h-[94%] max-w-[40ch] rounded-sm bg-gradient-to-r from-[var(--secondary-100)] via-[var(--pinkki-50)] to-[var(--pinkki-100)] p-1"
           >
-            <Media class="h-full w-full object-contain sm:w-auto" src="/poor-cv.svg" />
+            <Media width="400" height="341" class="h-full w-full object-contain sm:w-auto" src="/poor-cv.svg" />
           </div>
         </div>
         <div>
@@ -178,16 +182,5 @@ import { Media } from 'accessible-astro-components'
     display: block;
     margin: 0 auto;
     height: auto;
-  }
-
-  .gradient-box {
-    padding: 1rem;
-    max-width: 40ch;
-    border-width: 4px;
-    border-radius: 6px;
-    border-style: solid;
-    border-image: linear-gradient(to right, var(--pinkki-200), var(--primary-100)) 1;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 4px;
-    height: 93%;
   }
 </style>
